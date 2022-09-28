@@ -1,0 +1,56 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.id{
+  padding-bottom:20px;
+}
+
+h1{
+  padding-bottom: 20px;
+}
+
+.imagenes{
+  height: 800px;
+  width: 600px;
+  margin-left: 35%;
+}
+
+.btn-delete{
+  margin-left:95%;
+}
+
+p{
+  color:white;
+  font-size: 15px;
+  margin:10px;
+  margin-left:47%;
+}
+
+.title{
+margin-left:44%; 
+}
