@@ -30,8 +30,9 @@ CREATE TABLE `mangas` (
   `pages` int NOT NULL,
   `volume` int NOT NULL,
   `genre` varchar(90) NOT NULL,
+  `imagen` varchar(260) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +41,7 @@ CREATE TABLE `mangas` (
 
 LOCK TABLES `mangas` WRITE;
 /*!40000 ALTER TABLE `mangas` DISABLE KEYS */;
-INSERT INTO `mangas` VALUES (1,'Ijiranaide, Nagatoro-san',45,1,'RomCom');
+INSERT INTO `mangas` VALUES (1,'Ijiranaide, Nagatoro-san',83,1,'RomCom','https://images-na.ssl-images-amazon.com/images/I/81vpI3GVHbL.jpg'),(2,'Akame ga kill!',90,1,'Acción','https://kbimages1-a.akamaihd.net/99ab3395-b042-4969-82a7-cb51a558d568/1200/1200/False/akame-ga-kill-vol-1-2.jpg'),(3,'20th Century Boys',125,2,'Misterio','https://images-na.ssl-images-amazon.com/images/I/91J08a8L4BL.jpg'),(5,'Black Clover',97,3,'Aventuras','https://www.normaeditorial.com/upload/media/albumes/0001/06/4f25e153675fea771587dd5cbae2ef8e3a167cce.jpeg');
 /*!40000 ALTER TABLE `mangas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-23 20:07:20
+-- Dump completed on 2022-09-29 18:18:34
