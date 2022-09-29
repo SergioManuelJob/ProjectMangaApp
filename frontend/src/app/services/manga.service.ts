@@ -27,9 +27,8 @@ export class MangaService {
     return this.httpClient.put(this.endpoint + "/" + id, data);
   }
 
-  createManga(id: number, title: string, pages: number, volume: number, genre: string, imagen: string){
-    let obj = { id, title, pages, volume, genre, imagen }
-    return this.httpClient.post(this.endpoint, obj);
+  createManga(manga: Manga){
+    return this.httpClient.post(this.endpoint, manga).subscribe(data => {});
   }
   
 }

@@ -27,30 +27,32 @@
 }
 
 .id{
-  padding-bottom:20px;
-}
-
-h1{
-  padding-bottom: 20px;
+  padding-bottom:2em;
 }
 
 .imagenes{
-  height: 800px;
-  width: 600px;
-  margin-left: 35%;
+  height: 50%;
+  width: 50%;
+  margin-left: 25%;
 }
 
 .btn-delete{
-  margin-left:95%;
+  position:absolute;
+  left:80%;
+}
+
+.btn-add{
+  margin:10px;
 }
 
 p{
   color:white;
   font-size: 15px;
   margin:10px;
-  margin-left:47%;
+  margin-left:40%;
 }
 
 .title{
-margin-left:44%; 
+margin-left:22%; 
+padding-bottom: 1em;
 }

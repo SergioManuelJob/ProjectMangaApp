@@ -4,6 +4,6 @@ export interface Manga {
     pages: number;
     volume: number;
     genre: string;
-    imagen?: string;
+    imagen: string;
 }
 

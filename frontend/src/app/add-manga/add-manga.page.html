@@ -6,6 +6,38 @@
 
 <ion-content>
 
-  
+  <ion-list>
+    <form (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Title</ion-label>
+        <ion-input name="title" [(ngModel)]="title" type="text" required></ion-input>
+      </ion-item>
 
+      <ion-item>
+        <ion-label position="floating">Pages</ion-label>
+        <ion-input name="pages" [(ngModel)]="pages" type="number" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Volume</ion-label>
+        <ion-input name="volume" [(ngModel)]="volume" type="number" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Genre</ion-label>
+        <ion-input name="genre" [(ngModel)]="genre" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Image url</ion-label>
+        <ion-input name="imagen" [(ngModel)]="imagen" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block">Create new Manga</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
 </ion-content>

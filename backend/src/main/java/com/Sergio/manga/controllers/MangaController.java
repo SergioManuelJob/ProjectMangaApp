@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Sergio.manga.entity.model.Manga;
@@ -32,17 +33,17 @@ public class MangaController {
 	}
 	
 	@PostMapping("/manga")
-	public void post(Manga manga) {
+	public void post(@RequestBody Manga manga) {
 		mangaService.post(manga);
 	}
 	
 	@PutMapping("/manga/{id}")
-	public void put(Manga manga,@PathVariable(value = "id") long id) {
+	public void put(@RequestBody Manga manga,@PathVariable(value = "id") long id) {
 		mangaService.put(manga, id);
 	}
 	
 	@DeleteMapping("/manga/{id}")
-	public void delete(Manga manga, @PathVariable(value = "id") long id) {
+	public void delete(@PathVariable(value = "id") long id) {
 		mangaService.delete(id);
 	}
 	
