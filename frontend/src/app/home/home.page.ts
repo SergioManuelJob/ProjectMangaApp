@@ -35,6 +35,6 @@ export class HomePage {
   deleteManga(id: number){
     this.mangaService.deleteManga(id).subscribe(data =>{});
   }
- 
+  
 }
 

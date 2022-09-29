@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'add-manga',
     loadChildren: () => import('./add-manga/add-manga.module').then( m => m.AddMangaPageModule)
   },
+  {
+    path: 'update-manga/:id',
+    loadChildren: () => import('./update-manga/update-manga.module').then( m => m.UpdateMangaPageModule)
+  },
 ];
 
 @NgModule({

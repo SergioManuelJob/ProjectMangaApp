@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Add a New Manga</ion-title>
+    <ion-title>Update Manga</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,12 +15,14 @@
 
       <ion-item>
         <ion-label position="floating">Pages</ion-label>
-        <ion-input name="pages" [(ngModel)]="pages" type="number" placeholder="Insert number of pages..." required></ion-input>
+        <ion-input name="pages" [(ngModel)]="pages" type="number" placeholder="Insert number of pages..." required>
+        </ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Volume</ion-label>
-        <ion-input name="volume" [(ngModel)]="volume" type="number" placeholder="Insert volume number..." required></ion-input>
+        <ion-input name="volume" [(ngModel)]="volume" type="number" placeholder="Insert volume number..." required>
+        </ion-input>
       </ion-item>
 
       <ion-item>
@@ -30,7 +32,8 @@
 
       <ion-item>
         <ion-label position="floating">Image url</ion-label>
-        <ion-input name="imagen" [(ngModel)]="imagen" type="text" placeholder="Insert image url..." required></ion-input>
+        <ion-input name="imagen" [(ngModel)]="imagen" type="text" placeholder="Insert image url..." required>
+        </ion-input>
       </ion-item>
 
       <ion-row>
@@ -40,4 +43,5 @@
       </ion-row>
     </form>
   </ion-list>
+
 </ion-content>

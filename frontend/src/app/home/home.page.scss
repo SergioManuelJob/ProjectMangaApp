@@ -27,18 +27,23 @@
 }
 
 .id{
-  padding-bottom:2em;
+  padding-bottom:1em;
 }
 
 .imagenes{
-  height: 50%;
+  max-height: 50%;
   width: 50%;
   margin-left: 25%;
 }
 
 .btn-delete{
   position:absolute;
-  left:80%;
+  left:83%;
+}
+
+.btn-update{
+  position:absolute;
+  left:70%;
 }
 
 .btn-add{
@@ -49,10 +54,10 @@ p{
   color:white;
   font-size: 15px;
   margin:10px;
-  margin-left:40%;
+  margin-left:38%;
 }
 
 .title{
-margin-left:22%; 
+margin-left:auto; 
 padding-bottom: 1em;
 }

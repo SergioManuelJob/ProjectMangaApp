@@ -23,8 +23,8 @@ export class MangaService {
     return this.httpClient.delete<Manga>(this.endpoint + "/" + id);
   }
 
-  updateManga(id: number, data){
-    return this.httpClient.put(this.endpoint + "/" + id, data);
+  updateManga(id: number, manga: Manga){
+    return this.httpClient.put(this.endpoint + "/" + id, manga);
   }
 
   createManga(manga: Manga){

@@ -13,13 +13,16 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-button expand="block" (click)="goToAddManga()" class ="btn-add">Add New Manga</ion-button>
+  <ion-button expand="block" (click)="goToAddManga()" class="btn-add">Add New Manga</ion-button>
 
   <ion-list>
     <ion-item *ngFor="let m of mangas">
       <ion-label>
-        <h1 class="id">{{m.id}}. <ion-button class = "btn-delete" color="danger" size="small" (click)="deleteManga(m.id)">X</ion-button> </h1>
-        <h1 class = "title">{{m.title}}</h1>
+        <h1 class="id">{{m.id}}. 
+          <ion-button routerLink="/update-manga/{{m.id}}" class="btn-update"><ion-icon name="color-palette-outline"></ion-icon></ion-button>
+          <ion-button class="btn-delete" color="danger" size="small" (click)="deleteManga(m.id)">X</ion-button>
+        </h1>
+        <h1 class="title">{{m.title}}</h1>
         <ion-img class="imagenes" src={{m.imagen}}></ion-img>
         <p>Pages: {{m.pages}}</p>
         <p>Volume: {{m.volume}}</p>
