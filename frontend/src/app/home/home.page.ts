@@ -11,6 +11,7 @@ import { MangaService } from '../services/manga.service';
 export class HomePage {
  
   mangas: any = []
+  searchManga: string;
  
   constructor(private mangaService: MangaService, private router: Router) {
     this.getAllMangas();

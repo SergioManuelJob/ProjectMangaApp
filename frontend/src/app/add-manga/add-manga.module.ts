@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { AddMangaPageRoutingModule } from './add-manga-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AddMangaPage } from './add-manga.page';
 
@@ -13,7 +14,8 @@ import { AddMangaPage } from './add-manga.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    AddMangaPageRoutingModule
+    AddMangaPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [AddMangaPage]
 })

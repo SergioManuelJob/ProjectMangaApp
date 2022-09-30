@@ -7,16 +7,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Mangas Online</ion-title>
     </ion-toolbar>
   </ion-header>
 
+  <ion-searchbar icon="search-outline" [(ngModel)]="searchManga" showCancelButton="focus" animated placeholder="Search for a manga"></ion-searchbar>
+
   <ion-button expand="block" (click)="goToAddManga()" class="btn-add">Add New Manga</ion-button>
 
   <ion-list>
-    <ion-item *ngFor="let m of mangas">
+    <ion-item *ngFor="let m of mangas | filter:searchManga">
       <ion-label>
         <h1 class="title">{{m.title}} 
           <ion-button routerLink="/update-manga/{{m.id}}" class="btn-update"><ion-icon name="brush-outline"></ion-icon></ion-button>
