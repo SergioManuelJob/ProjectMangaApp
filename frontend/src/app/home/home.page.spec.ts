@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 import { HomePage } from './home.page';
 

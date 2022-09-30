@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Manga } from '../interfaces/manga';
 import { MangaService } from '../services/manga.service';
 
 @Component({
@@ -10,48 +10,55 @@ import { MangaService } from '../services/manga.service';
 })
 export class UpdateMangaPage implements OnInit {
 
-  @Input() id: number;
+  updateMangaFg: FormGroup;
+  id: any;
 
-  title: string;
-  pages: number;
-  volume: number;
-  genre: string;
-  imagen: string;
-
-  constructor(private mangaService: MangaService, private activatedRoute: ActivatedRoute, private router: Router) {
-    let manga: Manga;
-    mangaService.getOneManga(this.id).subscribe(data => {
-      manga = data;
-    });
-    this.title = manga.title;
-    this.pages = manga.pages;
-    this.volume = manga.volume;
-    this.genre = manga.genre;
-    this.imagen = manga.imagen;
+  constructor(private mangaService: MangaService, 
+    private activatedRoute: ActivatedRoute,
+     private router: Router,
+     public formBuilder: FormBuilder) 
+     {
+      this.id = this.activatedRoute.snapshot.paramMap.get("id"); 
   }
 
   ngOnInit() {
-    const id = this.activatedRoute.snapshot.params.id;
+    this.fetchManga(this.id);
+    this.updateMangaFg = this.formBuilder.group({
+      title: [''],
+      pages: [''],
+      volume: [''],
+      genre: [''],
+      imagen: ['']
+    })
+  }
+  
+  fetchManga(id: number){
+    this.mangaService.getOneManga(id).subscribe(data => {
+      this.updateMangaFg.setValue({
+        title: data['title'],
+        pages: data['pages'],
+        volume: data['volume'],
+        genre: data['genre'],
+        imagen: data['imagen']  
+      })
+    })
   }
 
   onSubmit() {
-    let manga: Manga = {
-      title: this.title,
-      pages: this.pages,
-      volume: this.volume,
-      genre: this.genre,
-      imagen: this.imagen
-    };
-    this.updateManga(manga);
+    if (!this.updateMangaFg.valid){
+      return false;
+    } else {
+      this.mangaService.updateManga(this.id, this.updateMangaFg.value).subscribe(() => {
+        this.updateMangaFg.reset();
+        this.router.navigate(["/home"]);
+      })
+    }  
+
+    
+  }
+
+  goBackHome(){
     this.router.navigate(["/home"]);
   }
-
-  updateManga(manga: Manga){
-    this.mangaService.updateManga(this.id, manga);
-  }
-
-
-
-
 
 }

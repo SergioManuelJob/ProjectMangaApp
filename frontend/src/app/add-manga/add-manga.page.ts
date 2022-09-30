@@ -37,6 +37,10 @@ export class AddMangaPage implements OnInit {
     this.router.navigate(["/home"]);
   }
 
+  goBackHome(){
+    this.router.navigate(["/home"]);
+  }
+
   
 
 }

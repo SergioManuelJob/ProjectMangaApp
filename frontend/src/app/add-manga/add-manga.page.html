@@ -9,28 +9,31 @@
   <ion-list>
     <form (ngSubmit)="onSubmit()">
       <ion-item>
-        <ion-label position="floating">Title</ion-label>
+        <ion-label position="stacked">Title</ion-label>
         <ion-input name="title" [(ngModel)]="title" type="text" placeholder="Insert title..." required></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">Pages</ion-label>
-        <ion-input name="pages" [(ngModel)]="pages" type="number" placeholder="Insert number of pages..." required></ion-input>
+        <ion-label position="stacked">Pages</ion-label>
+        <ion-input name="pages" [(ngModel)]="pages" type="number" placeholder="Insert number of pages..." required>
+        </ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">Volume</ion-label>
-        <ion-input name="volume" [(ngModel)]="volume" type="number" placeholder="Insert volume number..." required></ion-input>
+        <ion-label position="stacked">Volume</ion-label>
+        <ion-input name="volume" [(ngModel)]="volume" type="number" placeholder="Insert volume number..." required>
+        </ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">Genre</ion-label>
+        <ion-label position="stacked">Genre</ion-label>
         <ion-input name="genre" [(ngModel)]="genre" type="text" placeholder="Insert genre..." required></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">Image url</ion-label>
-        <ion-input name="imagen" [(ngModel)]="imagen" type="text" placeholder="Insert image url..." required></ion-input>
+        <ion-label position="stacked">Image url</ion-label>
+        <ion-input name="imagen" [(ngModel)]="imagen" type="text" placeholder="Insert image url..." required>
+        </ion-input>
       </ion-item>
 
       <ion-row>
@@ -38,6 +41,13 @@
           <ion-button type="submit" color="danger" expand="block">Create new Manga</ion-button>
         </ion-col>
       </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button color="secondary" expand="block" (click)="goBackHome()">Go Back</ion-button>
+        </ion-col>
+      </ion-row>
+
     </form>
   </ion-list>
 </ion-content>
