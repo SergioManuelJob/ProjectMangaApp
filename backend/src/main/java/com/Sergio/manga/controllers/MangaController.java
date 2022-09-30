@@ -33,12 +33,12 @@ public class MangaController {
 	}
 	
 	@PostMapping("/manga")
-	public void post(@RequestBody Manga manga) {
+	public void post(Manga manga) {
 		mangaService.post(manga);
 	}
 	
 	@PutMapping("/manga/{id}")
-	public void put(@RequestBody Manga manga,@PathVariable(value = "id") long id) {
+	public void put(Manga manga,@PathVariable(value = "id") long id) {
 		mangaService.put(manga, id);
 	}
 	
