@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Sergio.manga.entity.model.Manga;
@@ -30,6 +33,11 @@ public class MangaController {
 	@GetMapping("/manga/{id}")
 	public Manga getOne(@PathVariable(value = "id")long id) {
 		return mangaService.getOne(id);
+	}
+	
+	@RequestMapping(value = "/manga/genre/{genre}")
+	public List<Manga> getMangaByGenre(@PathVariable(value = "genre")String genre) {
+		return mangaService.getMangaByGenre(genre);
 	}
 	
 	@PostMapping("/manga")

@@ -2,6 +2,7 @@ package com.Sergio.manga.entity.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,9 +20,14 @@ public class Manga implements Serializable{
 	long id;
 	
 	String title;
+	
 	int pages;
+	
 	int volume;
+	
+	@Column(name="genre")
 	String genre;
+	
 	String imagen;
 	
 	

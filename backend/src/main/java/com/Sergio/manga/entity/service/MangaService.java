@@ -9,8 +9,8 @@ import com.Sergio.manga.entity.dao.IMangaDao;
 import com.Sergio.manga.entity.model.Manga;
 
 @Service
-public class MangaService implements IMangaService {
-	
+public class MangaService implements IMangaService {	
+
 	@Autowired
 	IMangaDao mangaDao;
 	
@@ -22,6 +22,10 @@ public class MangaService implements IMangaService {
 	@Override
 	public Manga getOne(long id) {
 		return mangaDao.findById(id).get();
+	}
+	
+	public List<Manga> getMangaByGenre(String genre){
+		return mangaDao.findByGenre(genre);
 	}
 
 	@Override
